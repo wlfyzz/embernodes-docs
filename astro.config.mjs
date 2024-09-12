@@ -11,7 +11,8 @@ export default defineConfig({
             customCss: ["./src/tailwind.css"],
             social: {
                 discord: "https://www.embernodes.com/discord",
-                youtube: "https://www.youtube.com/@embernodes",
+                youtube: "https://www.embernodes.com/youtube",
+                github: "https://www.embernodes.com/github",
                 email: "mailto:tom@embernodes.com",
             },
             sidebar: [
