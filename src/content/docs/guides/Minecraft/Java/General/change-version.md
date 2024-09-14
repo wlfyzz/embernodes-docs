@@ -1,5 +1,5 @@
 ---
-title: Minecraft Java Server Version Upgrade
+title: Minecraft Java Server Version Change
 description: A comprehensive guide to changing the version of your server.
 ---
 
