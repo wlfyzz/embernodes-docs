@@ -1,0 +1,89 @@
+---
+title: How to install Geyser to a minecraft java server
+description: A comprehensive guide to adding Geyserg to your minecraft server
+---
+
+# Minecraft Java Server Geyser Installation Guide
+**A comprehensive guide to installing Geyser on a Minecraft server to allow Bedrock players to join a Java server.**
+
+## Introduction
+
+Geyser is a proxy that enables Bedrock Edition players to join a Minecraft Java server. This guide will walk you through the steps to install Geyser and its companion plugin, Floodgate, allowing cross-play between Minecraft Java and Bedrock players.
+
+### What Geyser and Floodgate Do
+
+| Plugin Name                                           | Description                                                                                         | Recommended                                                                                          |
+| ----------------------------------------------------- | --------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| [Geyser](https://github.com/GeyserMC/Geyser)          | Proxy that allows Bedrock players to join a Java Edition server. Works on Spigot, Paper, or standalone. | Yes                                                                                                  |
+| [Floodgate](https://github.com/GeyserMC/Floodgate)    | Add-on for Geyser that allows Bedrock players to join without a Java Edition account.               | Yes                                                                                                  |
+
+## Prerequisites
+
+- Access to the [EmberNodes Panel](https://panel.embernodes.com).
+- A running Minecraft Java Edition server managed through EmberNodes Panel, using Spigot, Paper, or similar server software.
+- Basic understanding of server management.
+- Knowledge of your server’s IP address and ports.
+
+## Steps to Install Geyser and Floodgate
+
+### 1. Log in to the EmberNodes Panel
+
+1. Open your web browser and go to the [EmberNodes Panel](https://panel.embernodes.com).
+2. Log in with your EmberNodes Panel credentials.
+
+### 2. Navigate to Your Server
+
+1. From the EmberNodes Panel dashboard, select the Minecraft server you want to configure.
+2. Click on the server name to access its management page.
+
+### 3. Stop Your Server
+
+1. Press the "Stop" button on the top right of the panel.  
+   ![Power](/assets/actions/power/stop.png)
+
+### 4. Download the Geyser and Floodgate JAR Files
+
+Download the Geyser and Floodgate JAR files using the links below, and upload them to your server.
+
+- [Geyser JAR download](https://geysermc.org/download/?project=geyser)
+
+- [Floodgate JAR download](https://geysermc.org/download/?project=floodgate)
+
+
+### 5. Upload the JAR Files to Your Server
+
+1. Navigate to the **File Manager** tab on the left side of the screen.
+2. Open the `plugins` folder.
+3. Upload both the `Geyser-Spigot.jar` and `floodgate-spigot.jar` files into this folder.
+
+### 6. Start Your Server
+
+1. Go back to the main panel and press the "Start" button to start your server.  
+   ![Power](/assets/actions/power/start.png)
+
+### 7. Configure Geyser and Floodgate
+
+1. After starting the server, go to the **File Manager** tab again.
+2. Navigate to the `plugins/Geyser-Spigot` folder.
+3. Open the `config.yml` file and configure the following settings:
+
+   - **bedrock-address**: Set this to `0.0.0.0` to allow the proxy to listen for Bedrock connections on all interfaces.
+   - **bedrock-port**: Default is `19132`. You can change this if needed.
+   - **remote**:
+     - **address**: Set this to `127.0.0.1` (your Java server's IP).
+     - **port**: Ensure this is set to your server’s Java port, usually `25565`.
+   - **auth-type**: Set to `floodgate` if Floodgate is installed, or `online` for Java account authentication.
+
+4. Save the file after making your changes.
+
+### 8. Restart Your Server
+
+After configuration, restart your server by pressing the "Restart" button.
+
+### 9. Check Geyser Status
+
+Once the server is running, Bedrock players should now be able to connect to your server using your server's IP and the Bedrock port you set (default: `19132`).
+
+## Conclusion
+
+By installing Geyser (and Floodgate, if needed), your Minecraft Java server will now allow Bedrock Edition players to join seamlessly, creating a cross-platform experience!
